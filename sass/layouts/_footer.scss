@@ -1,0 +1,94 @@
+.footer {
+    position: relative;
+    height: 60rem;
+    width: 100%;
+    @include respond(tablet-port) {
+        top: 60rem;
+        height: 100rem;
+    }
+    & .move-down {
+        position: relative;
+        top: 20rem;
+    }
+    &-logo {
+        height: max-content;
+        width: fit-content;
+        text-align: center;
+        & p {
+            font-size: 1.6rem;
+            color: rgb(41, 24, 12);
+            padding-top: 2rem;
+            line-height: 2.5rem;
+        }
+        & ul {
+            padding-top: 2rem;
+            @include respond(tablet-port) {
+                position: relative;
+                left: 10rem;
+            }
+            & li {
+                list-style: none;
+                float: left;
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-left: 3rem;
+                color: $color-blue-light;
+                transition: all .3s ease;
+                animation: moveInBottom 3s ease-in;
+                &:hover {
+                    transform: scale(0.99);
+                }
+            }
+        }
+    }
+    &-1 {
+        height: max-content;
+        width: fit-content;
+        @include respond(tablet-port) {
+            display: none;
+        }
+        & h2 {
+            font-size: 2.5rem;
+            color: rgb(41, 24, 12);
+            padding-top: 2rem;
+        }
+        & p {
+            font-size: 1.6rem;
+            color: rgb(41, 24, 12);
+            padding-top: 2rem;
+            line-height: 2.5rem;
+            text-align: left;
+        }
+        & ul {
+            text-align: left;
+            & li {
+                list-style: none;
+                padding-top: 2rem;
+                font-size: 1.8rem;
+                width: fit-content;
+                font-weight: 200;
+                transition: all .6s ease-in;
+                cursor: pointer;
+                animation: moveInBottom 3s ease-in;
+                &:hover {
+                    color: $color-blue-light;
+                    transform: scale(0.98);
+                    border-bottom: 1px solid gray;
+                }
+            }
+        }
+    }
+    & .End {
+        position: absolute;
+        top: 90%;
+        border-top: 1px double ghostwhite;
+        height: 5rem;
+        width: 100%;
+        text-align: center;
+        & p {
+            font-size: 2rem;
+            color: gray;
+            padding-top: 1rem;
+        }
+    }
+}

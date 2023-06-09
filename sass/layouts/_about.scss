@@ -1,0 +1,196 @@
+.about {
+    position: relative;
+    height: 150rem;
+    width: 100%;
+    @include respond(tablet-port) {
+        height: 160rem;
+    }
+    &-image {
+        height: 70rem;
+        background-size: cover;
+        background-image: url(../../img/about.png);
+        background-position: inherit;
+    }
+    & .move-down {
+        position: relative;
+        top: 10rem;
+    }
+    &-text {
+        margin-top: 10rem;
+        & h2 {
+            font-size: 2rem;
+            color: $color-blue-dark;
+            padding-bottom: 2rem;
+            font-weight: normal;
+        }
+        & h1 {
+            font-size: 4.5rem;
+            line-height: 6rem;
+            color: $color-blue-darky;
+            padding-bottom: 2rem;
+        }
+        & p {
+            font-size: 2rem;
+            color: gray;
+            letter-spacing: 1px;
+            word-spacing: .5px;
+            line-height: 3rem;
+            width: fit-content;
+            padding-bottom: 2rem;
+        }
+        & .btn {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            @include respond(phone) {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    &-prayer-times {
+        position: relative;
+        top: 5%;
+        width: 90%;
+        height: 55rem;
+        left: 5%;
+        @include respond(tablet-port) {
+            height: 75rem;
+        }
+        background-color: #E7FBFB;
+        & .prayer-times {
+            font-size: 4.5rem;
+            line-height: 6rem;
+            color: $color-blue-darky;
+            padding-bottom: 2rem;
+            padding-top: 5rem;
+            padding-left: 2rem;
+        }
+        & p {
+            font-size: 2rem;
+            padding-left: 2rem;
+        }
+        & a {
+            position: absolute;
+            padding-top: 2rem;
+            padding-left: 2rem;
+            font-size: 2rem;
+            color: $color-blue-dark;
+        }
+        & .img-3 {
+            position: absolute;
+            top: 60%;
+            left: -2%;
+            height: 25rem;
+            @include respond(phone) {
+                display: none;
+            }
+        }
+        & .img-4 {
+            position: absolute;
+            top: 45%;
+            left: 10%;
+            height: 25rem;
+            @include respond(phone) {
+                display: none;
+            }
+        }
+        &-1 {
+            margin-top: 5rem;
+            height: 5rem;
+            width: 90%;
+            border-radius: 1rem;
+            background: linear-gradient( to right, rgba($color-blue-light, .2), rgba($color-blue-dark, .4));
+            display: inline-block;
+            animation: moveInLeft .9s ease-in-out;
+            @include respond(tablet-port) {
+                position: relative;
+                left: 15rem;
+            }
+            @include respond(phone) {
+                left: 2rem;
+            }
+            & h1 {
+                position: absolute;
+                font-size: 3rem;
+                font-weight: normal;
+                display: inline-block;
+                padding-left: 1rem;
+                padding-top: 1rem;
+                color: $color-blue-dark;
+                animation: moveInBottom 1s ease-in;
+            }
+            & p {
+                position: absolute;
+                animation: moveInBottom 1s ease-in;
+                padding-top: 1rem;
+                color: $color-blue-dark;
+                left: 80%;
+                font-size: 2.5rem;
+                display: inline-block;
+                @include respond(tablet-port) {
+                    display: none;
+                }
+            }
+        }
+        & .about-prayer-times-2 {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            background: linear-gradient( to right, rgba($color-pink-dark, .7), rgba($color-pink-light, .8));
+            & h1 {
+                color: $color-pink-darky;
+            }
+            & p {
+                color: $color-pink-darky;
+                @include respond(tablet-port) {
+                    display: none;
+                }
+            }
+        }
+        & .about-prayer-times-3 {
+            margin-top: 1rem;
+            margin-left: -2rem;
+            background: linear-gradient( to right, rgba($color-purple-dark, .2), rgba($color-pink-light, .8));
+            & h1 {
+                color: $color-purple-dark;
+            }
+            & p {
+                color: $color-purple-dark;
+                @include respond(tablet-port) {
+                    display: none;
+                }
+            }
+        }
+        & .about-prayer-times-4 {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            background: linear-gradient( to right, rgba($color-green-dark, .2), rgba($color-pink-light, .8));
+            & h1 {
+                color: $color-pink-darky;
+            }
+            & p {
+                color: $color-pink-darky;
+                @include respond(tablet-port) {
+                    display: none;
+                }
+            }
+        }
+        & .about-prayer-times-5 {
+            margin-top: 1rem;
+            margin-left: -2rem;
+            background: linear-gradient( to right, rgba($color-green-dark, .2), rgba($color-blue-dark, .4));
+            & h1 {
+                color: $color-blue-light;
+            }
+            & p {
+                color: $color-blue-light;
+                @include respond(tablet-port) {
+                    display: none;
+                }
+            }
+        }
+        & .about-prayer-times-6 {
+            margin-top: 1rem;
+            margin-left: 2rem;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.donate {
+    position: relative;
+    height: 60rem;
+    width: 100%;
+    background: #E7FBFB;
+    @include respond(phone) {
+        top: 40rem;
+    }
+    &-text {
+        margin-top: 10rem;
+        @include respond(tablet-port) {
+            display: none;
+        }
+        & h2 {
+            font-size: 2rem;
+            color: $color-blue-dark;
+            padding-bottom: 2rem;
+            font-weight: normal;
+        }
+        & h1 {
+            font-size: 4.5rem;
+            line-height: 6rem;
+            color: $color-blue-darky;
+            padding-bottom: 2rem;
+        }
+        & p {
+            font-size: 2rem;
+            color: gray;
+            letter-spacing: 1px;
+            word-spacing: .5px;
+            line-height: 3rem;
+            width: fit-content;
+            padding-bottom: 2rem;
+        }
+    }
+    & .heading-h1 {
+        position: relative;
+        top: 8rem;
+        font-size: 4.5rem;
+        line-height: 6rem;
+        color: $color-blue-darky;
+        padding-bottom: 2rem;
+        @include respond(tablet-port) {
+            top: -1rem;
+            width: max-content;
+        }
+    }
+    & .move-down {
+        position: relative;
+        top: 7rem;
+    }
+    & .form-left {
+        @include respond(tablet-port) {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+        }
+        @include respond(phone) {
+            left: -3%;
+        }
+    }
+    & .form-right {
+        @include respond(tablet-port) {
+            position: absolute;
+            top: 00%;
+            left: 120%;
+        }
+        @include respond(phone) {
+            left: 95%;
+        }
+    }
+    & input {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        font-family: inherit;
+        padding: 2rem 2rem;
+        border-radius: 2px;
+        background-color: rbga(whtie, 0.5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 28rem;
+        display: block;
+        color: inherit;
+        transition: all .3s;
+        &:focus {
+            outline: none;
+            box-shadow: 1rem 1rem 2rem rgba(black, .3);
+            border-bottom: 3px solid $color-blue-dark;
+            &:invalid {
+                border-bottom: 3px solid rgb(219, 115, 115);
+            }
+            &::-webkit-input-placeholder {
+                color: $color-blue-darky;
+            }
+        }
+    }
+    & .btn {
+        margin-top: 3rem;
+        border-radius: 3px;
+        width: 58rem;
+        font-size: 1.5rem;
+        text-align: center;
+        @include respond(tablet-port) {
+            position: relative;
+            top: 30rem;
+            left: -7rem;
+        }
+        &::after {
+            border-radius: 3px;
+        }
+    }
+}

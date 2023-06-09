@@ -1,0 +1,51 @@
+.header {
+    position: relative;
+    height: 70rem;
+    width: 100%;
+    background: linear-gradient( to left, rgba($color-blue-darky, 0.5), rgba($color-blue-darky, 0.4)), url(../../img/slide-1.jpg);
+    background-size: cover;
+    background-position: center;
+    &-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: max-content;
+        width: max-content;
+        text-align: center;
+        & h2 {
+            margin-left: 27rem;
+            margin-bottom: 2rem;
+            animation: moveInBottom .5s ease-in-out;
+            height: 3rem;
+            color: white;
+            width: max-content;
+            border-radius: 5rem;
+            background-color: rgba(255, 255, 255, 0.329);
+            padding: 1rem 2rem;
+            padding-bottom: 3rem;
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
+        }
+        & h1 {
+            animation: moveInBottom .35s ease-in-out;
+            font-size: 5rem;
+            color: white;
+            width: 70rem;
+            text-align: center;
+            line-height: 7.5rem;
+            @include respond(phone) {
+                font-size: 3rem;
+            }
+        }
+        & .btn {
+            margin-top: 4rem;
+            color: white;
+            font-size: 1.5rem;
+            @include respond(phone) {
+                font-size: 1rem;
+            }
+        }
+    }
+}

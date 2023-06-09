@@ -1,0 +1,168 @@
+.events {
+    position: relative;
+    height: 120rem;
+    width: 100%;
+    border-bottom: 1px solid gainsboro;
+    @include respond(tablet-port) {
+        height: 170rem;
+    }
+    @include respond(phone) {
+        top: 30rem;
+        height: 200rem;
+    }
+    &-heading {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: max-content;
+        width: fit-content;
+        text-align: center;
+        @include respond(phone) {
+            top: 12%;
+        }
+        & h2 {
+            font-size: 1.8rem;
+            color: $color-blue-light;
+            font-weight: normal;
+            padding-bottom: 2rem;
+        }
+        & h1 {
+            font-size: 4.5rem;
+            color: $color-blue-darky;
+            padding-bottom: 5rem;
+        }
+    }
+    & .move-down {
+        position: relative;
+        top: 30rem;
+        @include respond(phone) {
+            left: -2rem;
+        }
+    }
+    &-1 {
+        height: max-content;
+        width: 55rem;
+        box-shadow: 1px 2px 1px gainsboro;
+        transition: all .6s;
+        animation: moveInBottom 5s ease-in;
+        @include respond(tablet-port) {
+            width: 45rem;
+        }
+        &:hover {
+            transform: scale(1.01);
+        }
+        &-thumb {
+            position: absolute;
+            top: 0%;
+            margin-left: .1rem;
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%, 50% 80%);
+            height: 8rem;
+            width: 5rem;
+            background: linear-gradient( to right bottom, rgba($color-purple-dark, .8), rgba($color-pink-darky, 0.7));
+            text-align: center;
+            & h1 {
+                font-size: 2rem;
+                color: white;
+                padding-top: 10px;
+            }
+        }
+        & img {
+            height: 100%;
+            width: 100%;
+            @include respond(tablet-port) {
+                width: 42rem;
+            }
+        }
+        &-heading {
+            font-size: 2rem;
+            color: $color-blue-darky;
+            padding-top: 4rem;
+        }
+        & i {
+            font-size: 1.5rem;
+            color: gray;
+            padding-top: 1rem;
+        }
+        & p {
+            font-size: 1.9rem;
+            color: gray;
+            padding-top: 1rem;
+            line-height: 3rem;
+            & span {
+                color: $color-blue-light;
+                transition: all .3s;
+                cursor: pointer;
+                &:hover {
+                    color: $color-blue-darky;
+                }
+            }
+        }
+    }
+}
+
+.events-bottom {
+    position: relative;
+    top: 40%;
+    height: max-content;
+    width: 100%;
+    @include respond(tablet-port) {
+        display: none;
+    }
+    @include respond(phone) {
+        display: none;
+    }
+    &-heading {
+        & h2 {
+            font-size: 2rem;
+            color: $color-blue-dark;
+            padding-bottom: 2rem;
+            font-weight: normal;
+        }
+        & h1 {
+            font-size: 4.5rem;
+            line-height: 6rem;
+            color: $color-blue-darky;
+            padding-bottom: 2rem;
+        }
+        & p {
+            font-size: 2rem;
+            color: gray;
+            letter-spacing: 1px;
+            word-spacing: .5px;
+            line-height: 3rem;
+            width: fit-content;
+            padding-bottom: 2rem;
+        }
+        & .btn {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            border-radius: 3px;
+            &::after {
+                border-radius: 3px;
+            }
+        }
+    }
+    &-circle-1 {
+        height: max-content;
+        width: fit-content;
+        text-align: center;
+        animation: moveInBottom 6s ease-out;
+        transition: all ease-in .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        & h2 {
+            position: relative;
+            font-size: 3rem;
+            top: -10rem;
+            color: $color-blue-darky;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        & h1 {
+            font-size: 2.5rem;
+            color: $color-blue-darky;
+        }
+    }
+}
